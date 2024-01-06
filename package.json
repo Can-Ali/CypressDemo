@@ -1,0 +1,21 @@
+{
+  "name": "cypress demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:e2e": "npm run cypress:run -- --spec 'cypress/e2e/*.spec.cy.js'",
+    "test:api": "npm run cypress:run -- --spec 'cypress/e2e/API/*.spec.cy.js'"
+  },
+  "keywords": [],
+  "author": "Acan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.1",
+    "cypress-mochawesome-reporter": "^3.7.0",
+    "mochawesome": "^7.1.3"
+  }
+}
+

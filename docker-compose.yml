@@ -1,0 +1,16 @@
+version: '3'
+services:
+  all-tests: # runs all the tests
+    build: .
+    volumes:
+      - "./docker-reports:/app/cypress/reports"
+  e2e-tests: # runs e2e tests
+    build: .
+    volumes:
+      - "./docker-reports:/app/cypress/reports"
+    command: "test:e2e"
+  smoke-tests: # runs smoke tests
+    build: .
+    volumes:
+      - "./docker-reports:/app/mochawesome-report"
+    command: "test:smoke"
